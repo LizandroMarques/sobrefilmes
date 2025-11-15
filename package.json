@@ -22,8 +22,8 @@
   "scripts": {
     "start": "npm-run-all --parallel dev:css react-start",
     "react-start": "react-scripts start",
-    "dev:css": "npx @tailwindcss/cli -i ./src/tailwind.css -o ./src/styles/index.css --watch",
-    "build:css": "npx @tailwindcss/cli -i ./src/tailwind.css -o ./src/styles/index.css",
+    "dev:css": "npx @tailwindcss/cli -i ./src/styles/tailwind.css -o ./src/styles/index.css --watch",
+    "build:css": "npx @tailwindcss/cli -i ./src/styles/tailwind.css -o ./src/styles/index.css",
     "build": "npm run build:css && react-scripts build"
   },
   "eslintConfig": {
