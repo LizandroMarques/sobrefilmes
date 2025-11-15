@@ -8,7 +8,6 @@ function App() {
       className="min-h-screen w-screen bg-no-repeat bg-center bg-cover bg-fixed flex flex-col"
       style={{ backgroundImage: `url(${fundo})` }}
     >
-      <link href="../styles/output.css" rel="stylesheet"></link>
       <ToastContainer autoclose={1000} />
       <RoutesApp />
     </div>

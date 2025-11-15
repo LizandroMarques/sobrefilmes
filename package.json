@@ -2,8 +2,11 @@
   "name": "sobrefilmes",
   "version": "0.1.0",
   "private": true,
+  "overrides": {
+    "tailwindcss": "4.1.17"
+  },
   "dependencies": {
-    "@tailwindcss/cli": "^4.1.16",
+    "@tailwindcss/cli": "^4.1.17",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.0",
@@ -14,15 +17,14 @@
     "react-router-dom": "^7.9.5",
     "react-scripts": "5.0.1",
     "react-toastify": "^11.0.5",
-    "tailwindcss": "^4.1.16",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "dev": "npx @tailwindcss/cli -i ./src/styles/index.css -o ./src/styles/output.css --watch",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "npm-run-all --parallel dev:css react-start",
+    "react-start": "react-scripts start",
+    "dev:css": "npx @tailwindcss/cli -i ./src/tailwind.css -o ./src/styles/index.css --watch",
+    "build:css": "npx @tailwindcss/cli -i ./src/tailwind.css -o ./src/styles/index.css",
+    "build": "npm run build:css && react-scripts build"
   },
   "eslintConfig": {
     "extends": [
@@ -41,5 +43,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
   }
 }

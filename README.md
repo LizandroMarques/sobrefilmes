@@ -38,8 +38,3 @@ Caso deseje saber mais sobre mim ou sobre o projeto, você pode entrar em contat
 
     - O projeto irá rodar no localhost e na porta 3000:
         [http://localhost:3000](http://localhost:3000)
-
-# OBSEVAÇÃO
-
-    - O arquivo output.css gerado pelo TailwindCSS foi commitado, ou seja, o projeto funcionará corretamente. Mas, caso deseje alterar o css, deverá ser gerado um novo css através do script abaixo:
-        * npm run dev
