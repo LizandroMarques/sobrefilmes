@@ -1,6 +1,14 @@
 import { BotaoVoltar } from "../../Components/BotaoVoltar";
+import { useEffect } from "react";
 
 function Sobre() {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
+
   return (
     <div className="flex justify-center py-5 bg-white/x55">
       <div className="flex flex-col justify-center items-center w-120 md:max-w-3xl p-5 font-sans bg-white/30 rounded-2xl">
@@ -93,7 +101,7 @@ function Sobre() {
           </div>
         </div>
         <br />
-        <div className="bg-white/40 p-2 rounded-2xl hover:bg-white/60">
+        <div className="flex flex-col bg-white/40 p-2 rounded-2xl hover:bg-white/60">
           <h2>
             <strong>Contato</strong>
           </h2>
@@ -101,38 +109,39 @@ function Sobre() {
             Caso deseje saber mais sobre mim ou sobre o projeto, você pode
             entrar em contato ou acompanhar meu trabalho através dos links
             abaixo:
-            <br />
-            Nome:
-            <strong className="hover:text-white hover:font-bold">
-              Lizandro Marques
-            </strong>
-            <br />
-            LinkedIn:
+          </p>
+          <br />
+          <div className="flex flex-row justify-around">
             <a
               href="https://www.linkedin.com/in/lizandro-marques"
-              className="hover:text-white hover:font-bold"
+              className="hover:text-white hover:font-bold text-7xl"
             >
-              <strong>https://www.linkedin.com/in/lizandro-marques</strong>
+              <strong>
+                <i class="fa fa-linkedin"></i>
+              </strong>
             </a>
             <br />
-            GitHub:
             <a
               href="https://github.com/LizandroMarques/"
-              className="hover:text-white hover:font-bold"
+              className="hover:text-white hover:font-bold text-7xl"
             >
-              <strong>https://github.com/LizandroMarques/</strong>
+              <strong>
+                <i class="fa fa-github"></i>
+              </strong>
             </a>
             <br />
-            WhatsApp:
-            <strong className="hover:text-white hover:font-bold">
-              (53)9.9966.3344
+            <strong className="hover:text-white hover:font-bold text-7xl">
+              <a href="https://wa.me/5553999663344">
+                <i class="fa fa-whatsapp"></i>
+              </a>
             </strong>
             <br />
-            E-mail:
-            <strong className="hover:text-white hover:font-bold">
-              lizandromarques@gmail.com
+            <strong className="hover:text-white hover:font-bold text-7xl">
+              <a href="mailto:lizandromarques@gmail.com?subject=Contato pelo site SobreFilmes">
+                <i class="fa fa-envelope"></i>
+              </a>
             </strong>
-          </p>
+          </div>
         </div>
         <BotaoVoltar>VOLTAR</BotaoVoltar>
       </div>

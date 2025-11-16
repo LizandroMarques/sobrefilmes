@@ -2,26 +2,32 @@ import logo from "../../assets/logo.png";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Sobre from "../../pages/Sobre";
+import { useMenu } from "../../context/MenuContext";
 
 function Header() {
-  const [menuAtivo, setMenuAtivo] = useState("emExibicao");
+  //   const [menuAtivo, setMenuAtivo] = useState("emExibicao");
+  const { menuAtivo, setMenuAtivo } = useMenu();
   const [conteudoProcura, setConteudoProcura] = useState("");
 
   return (
     <header className="flex flex-wrap items-center justify-between bg-orange-950/35 px-6 py-4 z-50">
-      <Link to="/sobre">
+      <Link to="/sobre" onClick={() => setMenuAtivo("-")}>
         <img
           src={logo}
           alt="Sobre Filmes"
           className="hidden md:block md:w-48"
         />
+        {(e) => {
+          e.preventDefault();
+          setMenuAtivo("-");
+        }}
       </Link>
 
       <div
         id="containerFilmesSeries"
         className="flex flex-col h-35 items-center justify-center text-white gap-4 md:gap-6 flex-1"
       >
-        <Link to="/sobre">
+        <Link to="/sobre" onClick={() => setMenuAtivo("-")}>
           <img
             src={logo}
             alt="Sobre Filmes"
