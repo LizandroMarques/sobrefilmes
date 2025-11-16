@@ -3,7 +3,7 @@ import { BotaoVoltar } from "../../Components/BotaoVoltar";
 function Sobre() {
   return (
     <div className="flex justify-center py-5 bg-white/x55">
-      <div className="flex flex-col justify-center items-center w-120 md:w-3xl p-5 font-sans bg-white/30 rounded-2xl">
+      <div className="flex flex-col justify-center items-center w-120 md:max-w-3xl p-5 font-sans bg-white/30 rounded-2xl">
         <div className="bg-white/40 p-2 rounded-2xl hover:bg-white/60">
           <h1>
             <strong>Sobre o Projeto</strong>

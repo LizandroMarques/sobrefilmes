@@ -46,7 +46,7 @@ export function Detalhes({ filme }) {
         />
 
         <div className="relative flex items-center justify-center min-h-[calc(100vh-80px)] py-6">
-          <div className="h-auto max-w-7xl w-full mx-auto flex flex-col md:flex-row items-stretch justify-between bg-white/10 z-20 p-4 rounded-2xl shadow-lg gap-4">
+          <div className="h-auto max-w-screen-xl w-full mx-auto flex flex-col md:flex-row items-stretch justify-between bg-white/10 z-20 p-4 rounded-2xl shadow-lg gap-4">
             <div
               className={
                 filme.belongs_to_collection?.id
@@ -167,7 +167,7 @@ export function Detalhes({ filme }) {
           </div>
         </div>
       </section>
-      <div className="relative z-9999">
+      <div className="relative z-[9999]">
         <div className="h-14 w-full font-bold text-3xl flex justify-center items-center rounded-t-lg">
           <BotaoVoltar>VOLTAR</BotaoVoltar>
         </div>
